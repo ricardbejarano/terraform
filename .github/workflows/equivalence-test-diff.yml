@@ -19,14 +19,14 @@ jobs:
 
     steps:
       - name: Fetch source code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@v6.0.2
 
       - name: Determine Go version
         id: go
         uses: ./.github/actions/go-version
 
       - name: Install Go toolchain
-        uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # v6.3.0
+        uses: actions/setup-go@v6.3.0
         with:
           go-version: ${{ steps.go.outputs.version }}
           cache-dependency-path: go.sum
